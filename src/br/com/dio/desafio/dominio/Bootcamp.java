@@ -9,8 +9,8 @@ import java.util.Set;
 public class Bootcamp {
     private String nome;
     private String descrição;
-    private LocalDate datainicial = LocalDate.now();
-    private LocalDate datafinal = datainicial.plusDays(45);
+    private final LocalDate datainicial = LocalDate.now();
+    private final LocalDate datafinal = datainicial.plusDays(45);
     private Set<Dev> devsInscritos = new HashSet<>();
     private Set<Conteudo> conteudos = new LinkedHashSet<>();
 
@@ -34,16 +34,8 @@ public class Bootcamp {
         return datainicial;
     }
 
-    public void setDatainicial(LocalDate datainicial) {
-        this.datainicial = datainicial;
-    }
-
     public LocalDate getDatafinal() {
         return datafinal;
-    }
-
-    public void setDatafinal(LocalDate datafinal) {
-        this.datafinal = datafinal;
     }
 
     public Set<Dev> getDevsInscritos() {
@@ -57,7 +49,9 @@ public class Bootcamp {
     public Set<Conteudo> getConteudos() {
         return conteudos;
     }
-
+    public void setConteudos(Set<Conteudo> conteudos) {
+        this.conteudos = conteudos;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -71,9 +65,4 @@ public class Bootcamp {
         return Objects.hash(nome, descrição, datainicial, datafinal, devsInscritos, conteudos);
     }
 
-    public void setConteudos(Set<Conteudo> conteudos) {
-        this.conteudos = conteudos;
-
-
-    }
 }

@@ -9,18 +9,18 @@ public class Main {
 
         public static void main (String[] args){
             Curso curso1 = new Curso();
-            curso1.setTítulo("curso java");
+            curso1.setTitulo("curso java");
             curso1.setDescrição("descrição curso java");
             curso1.setCargaHoraria(8);
 
             Curso curso2 = new Curso();
-            curso2.setTítulo("curso js");
+            curso2.setTitulo("curso js");
             curso2.setDescrição("descrição curso js");
             curso2.setCargaHoraria(4);
 
 
             Mentoria mentoria = new Mentoria();
-            mentoria.setTítulo("mentoria de java");
+            mentoria.setTitulo("mentoria de java");
             mentoria.setDescrição("descrição mentoria java");
             mentoria.setData(LocalDate.now());
 
@@ -41,6 +41,8 @@ public class Main {
             System.out.println("Conteúdos Inscritos:" + devPatricia.getConteudosInscritos());
             devPatricia.progredir();
             devPatricia.progredir();
+            System.out.println("-");
+            System.out.println("Conteúdos Inscritos:" + devPatricia.getConteudosInscritos());
             System.out.println("Conteúdos Concluídos:" + devPatricia.getConteudosConcluidos());
             System.out.println("XP:" + devPatricia.calcularTotalXp());
 
@@ -52,12 +54,14 @@ public class Main {
             devBruna.inscreverBootcamp(bootcamp);
             System.out.println("Conteúdos Inscritos:" + devBruna.getConteudosInscritos());
            devBruna.progredir();
+           devBruna.progredir();
+           devBruna.progredir();
+            System.out.println("-");
+            System.out.println("Conteúdos Inscritos:" + devBruna.getConteudosInscritos());
             System.out.println("Conteúdos Concluídos:" + devBruna.getConteudosConcluidos());
             System.out.println("XP:" + devBruna.calcularTotalXp());
 
         }
-
-
-    }
+}
 
 

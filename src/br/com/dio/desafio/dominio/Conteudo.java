@@ -12,21 +12,13 @@ public abstract class Conteudo {
    public String getTitulo() {
       return titulo;
    }
-
-   public String getDescriçao() {
-      return descriçao;
-   }
-
-   public void setDescriçao(String descriçao) {
-      this.descriçao = descriçao;
-   }
-
    public void setTitulo(String titulo) {
       this.titulo = titulo;
    }
-
-   public void setTítulo(String cursoJava) {
+   public String getDescriçao(String descriçãoCursoJava) {
+      return descriçao;
    }
+
 
    public void setDescrição(String descriçãoCursoJava) {
    }

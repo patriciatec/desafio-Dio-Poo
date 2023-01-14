@@ -1,7 +1,5 @@
 package br.com.dio.desafio.dominio;
 
-import com.sun.source.doctree.SeeTree;
-
 import java.util.*;
 
 public class Dev {
@@ -48,14 +46,15 @@ public class Dev {
   public Set<Conteudo> getConteudosInscritos() {
     return conteudosInscritos;
   }
+  public void setConteudosInscritos(Set<Conteudo> conteudosInscritos) {
+    this.conteudosInscritos = conteudosInscritos;
+  }
+
   public Set<Conteudo> getConteudosConcluidos() {
     return conteudosConcluidos;
   }
   public void setConteudosConcluidos(Set<Conteudo> conteudosConcluidos) {
     this.conteudosConcluidos = conteudosConcluidos;
-  }
-  public void setConteudosInscritos(Set<Conteudo> conteudosInscritos) {
-    this.conteudosInscritos = conteudosInscritos;
   }
 
   @Override
@@ -70,9 +69,5 @@ public class Dev {
   public int hashCode() {
     return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
   }
-
-
-
-
 
 }
